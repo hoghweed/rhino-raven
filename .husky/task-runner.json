@@ -1,0 +1,24 @@
+{
+   "tasks": [
+      {
+         "name": "commit-message-linter",
+         "command": "dotnet",
+         "args": [
+            "husky",
+            "exec", 
+            ".husky/csx/commit-lint.csx", 
+            "--args", 
+            "${args}"
+         ]
+       },
+      {
+         "name": "welcome-message-example",
+         "command": "bash",
+         "args": [ "-c", "echo Husky.Net is awesome!" ],
+         "windows": {
+            "command": "cmd",
+            "args": ["/c", "echo Husky.Net is awesome!" ]
+         }
+      }
+   ]
+}
