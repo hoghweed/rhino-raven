@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using Rhino;
+﻿using Rhino;
 using Rhino.Commands;
-using Rhino.Geometry;
-using Rhino.Input;
-using Rhino.Input.Custom;
 using RhinoRaven.Extensions;
 
 namespace RhinoRaven;
@@ -21,7 +14,7 @@ public class SaveToRavenCommand : Command
     }
 
     ///<summary>The only instance of this command.</summary>
-    public static SaveToRavenCommand Instance { get; private set; }
+    public static SaveToRavenCommand? Instance { get; private set; }
 
     ///<returns>The command name as it appears on the Rhino command line.</returns>
     public override string EnglishName => "SaveToRaven";
@@ -30,8 +23,13 @@ public class SaveToRavenCommand : Command
     {
         RhinoApp.WriteLine("The {0} command added one line to the document.", EnglishName);
         var snapshot = doc.RecordSelection();
+        RhinoApp.WriteLine("A Selection Snapshot [{0}] has been created.", snapshot.Id);
 
-        snapshot.Save();
+        var result = snapshot.Save();
+        RhinoApp.WriteLine("The Snapshot [{0}] was saved with {1}: {2}", snapshot.Id, result.Kind, result.Message);
+
+        System.Diagnostics.Debug.WriteLine(result.Get<string>());
+
 
         return Result.Success;
     }

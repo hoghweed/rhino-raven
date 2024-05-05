@@ -9,9 +9,6 @@
       <tool_bar_item guid="cc307a2c-b8c0-4073-947f-39c1ca5e95eb" display_style_from_parent="False">
         <left_macro_id>953ffbe1-67c5-461d-b3d2-f9a2d803ffe1</left_macro_id>
       </tool_bar_item>
-      <tool_bar_item guid="236053cf-1b39-43e6-9d3e-af859d22dede" display_style_from_parent="False">
-        <left_macro_id>a7f213ec-1310-4327-aec0-878a3d7f2901</left_macro_id>
-      </tool_bar_item>
     </tool_bar>
   </tool_bars>
   <macros>
@@ -32,24 +29,6 @@
         <locale_1033>Save To Raven</locale_1033>
       </menu_text>
       <script>SaveToRaven</script>
-    </macro_item>
-    <macro_item guid="a7f213ec-1310-4327-aec0-878a3d7f2901" bitmap_id="7497dd32-1e40-4747-b558-70adc3eac226">
-      <text>
-        <locale_1033>LoadFromRaven</locale_1033>
-      </text>
-      <tooltip>
-        <locale_1033>Load Data From Raven</locale_1033>
-      </tooltip>
-      <help_text>
-        <locale_1033>Load From Raven</locale_1033>
-      </help_text>
-      <button_text>
-        <locale_1033>Load From Raven</locale_1033>
-      </button_text>
-      <menu_text>
-        <locale_1033>Load From Raven</locale_1033>
-      </menu_text>
-      <script>LoadFromRaven</script>
     </macro_item>
   </macros>
   <icons>

@@ -10,6 +10,8 @@ public static class RhinoRavenPathProvider
 
     private static string? Path => Environment.GetEnvironmentVariable(UserDataPathEnvVar);
 
+    public static string ExecutingPluginPath => System.IO.Path.GetDirectoryName(Assembly.GetAssembly(typeof(RhinoRavenPlugin)).Location);
+
     /// <summary>
     /// Get the installation path.
     /// </summary>

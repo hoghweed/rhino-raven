@@ -24,7 +24,7 @@ public class RhinoRavenPlugin : PlugIn
     }
 
     ///<summary>Gets the only instance of the RhinoRavenPlugin plug-in.</summary>
-    public static RhinoRavenPlugin Instance { get; private set; }
+    public static RhinoRavenPlugin? Instance { get; private set; }
 
     // You can override methods here to change the plug-in behavior on
     // loading and shut down, add options pages to the Rhino _Option command
