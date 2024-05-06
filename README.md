@@ -22,6 +22,13 @@ To use RhinoRaven, you need the following:
 - Rhino 8
 - .NET 7.0
 
+In case of installation script files permission issues remember to make it executable
+```bash
+# from the repo root
+chmod +x install.sh
+chmod +x uninstall.sh
+```
+
 ## 🚀 Installation
 
 To install RhinoRaven, follow these steps:
@@ -79,4 +86,5 @@ To use the RhinoRaven plugin, follow these steps:
    - After clicking the button, RhinoRaven will save a Selection Snapshot JSON file.
    - The Selection Snapshot will be saved in a subfolder named `selections` at the plugin installation path.
      - Within that folder, a sub folder is created and named using the slug of the file name
+     - The folder is generally available at `/Users/{username}/Library/Application Support/McNeel/Rhinoceros/packages/8.0/RhinoRaven/1.0.0/selections`
 
