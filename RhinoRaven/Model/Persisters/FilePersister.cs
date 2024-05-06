@@ -13,7 +13,10 @@ namespace RhinoRaven.Model.Persisters
             {
                 var result = JsonConvert.SerializeObject(
                     snapshot,
-                    Formatting.Indented
+                    new JsonSerializerSettings() {
+                        Formatting = Formatting.Indented,
+                        NullValueHandling = NullValueHandling.Ignore
+                    }
                 );
 
                 var destinationPath = Path.Combine(RhinoRavenPathProvider.ExecutingPluginPath, "selections", snapshot.SourceName.Replace(' ', '-').Replace('.','-'));

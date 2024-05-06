@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace RhinoRaven.Model;
 
-public record ObjectRef(string Id, string Name, string ObjectType, string ObjectId, string? ParentId);
+public record ObjectRef(string Id, string? Name, string ObjectType, string? ObjectId, string? ParentId);
 
 public class SelectionSnapshot
 {

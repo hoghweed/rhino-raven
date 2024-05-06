@@ -16,7 +16,7 @@ namespace RhinoRaven.Extensions
                     document.Name,
                     document.Path,
                     new FilePersister(),
-                    selection.GetHierarchy()
+                    selection.GetObjectsRefHierarchy()
                 );
         }
     }

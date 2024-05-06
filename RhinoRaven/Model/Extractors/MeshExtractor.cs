@@ -5,11 +5,18 @@ using Rhino.Geometry;
 
 namespace RhinoRaven.Model.Extractors;
 
-public class MeshExtractor : GeometryExtractor<Mesh>
+public class MeshExtractor : ObjectRefExtractor<Mesh>
 {
-    protected override IEnumerable<GeometryBase> ExtractFrom(Mesh source)
+    protected IEnumerable<ObjectRef> ExtractFrom(Mesh source)
     {
-        //return source.Vertices.AsEnumerable();
+        //   return source.Normals.AsEnumerable<GeometryBase>()
+        //        .Concat(source.Edges.AsEnumerable<GeometryBase>())
+        //        .Concat(source.Curves3D.AsEnumerable<GeometryBase>());
+        throw new NotImplementedException();
+    }
+
+    protected override IEnumerable<ObjectRef> ExtractFrom(Mesh source, ObjectRef? parent)
+    {
         throw new NotImplementedException();
     }
 }

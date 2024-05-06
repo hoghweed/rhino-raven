@@ -21,7 +21,6 @@ public class SaveToRavenCommand : Command
 
     protected override Result RunCommand(RhinoDoc doc, RunMode mode)
     {
-        RhinoApp.WriteLine("The {0} command added one line to the document.", EnglishName);
         var snapshot = doc.RecordSelection();
         RhinoApp.WriteLine("A Selection Snapshot [{0}] has been created.", snapshot.Id);
 

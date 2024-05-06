@@ -8,22 +8,6 @@ namespace RhinoRaven.Extensions;
 
 public static class ExtensionsToException
 {
-    [Pure]
-    public static bool IsFatal(this Exception ex)
-    {
-        return ex switch
-        {
-            OutOfMemoryException
-            or ThreadAbortException
-            or InvalidProgramException
-            or AccessViolationException
-            or AppDomainUnloadedException
-            or BadImageFormatException
-              => true,
-            _ => false,
-        };
-    }
-
     public static string ToFormattedString(this Exception exception)
     {
         var messages = exception
